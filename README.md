@@ -44,6 +44,7 @@ docker compose up -d
 Run the backend
 
 ```bash
+cd backend
 bun run dev
 ```
 
