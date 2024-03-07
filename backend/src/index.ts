@@ -51,6 +51,26 @@ const app = new Elysia({ prefix: '/articles' })
     '/:id',
     async ({ params }) => await db.article.delete({ where: { id: params.id } })
   )
+  .patch(
+    '/:id',
+    async ({ params, body }) => {
+      console.log('body', body)
+      await db.article.update({
+        where: { id: params.id },
+        data: {
+          ...body,
+        },
+      });
+    },
+    {
+      body: t.Object({
+        title: t.Optional(t.String()),
+        summary: t.Optional(t.String()),
+        body: t.Optional(t.String()),
+        author: t.Optional(t.String()),
+      }),
+    }
+  )
   .listen(1111);
 
 export type App = typeof app;
