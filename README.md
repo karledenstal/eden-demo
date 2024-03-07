@@ -36,9 +36,9 @@ bun install
 
 Start the database
 
-```
+```bash
 cd backend
-docker-compose up -d
+docker compose up -d
 ```
 
 Run the backend
