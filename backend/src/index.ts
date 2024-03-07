@@ -54,7 +54,6 @@ const app = new Elysia({ prefix: '/articles' })
   .patch(
     '/:id',
     async ({ params, body }) => {
-      console.log('body', body)
       await db.article.update({
         where: { id: params.id },
         data: {
