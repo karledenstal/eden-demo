@@ -16,6 +16,8 @@ A quick demo using Elysia & Elysia Eden. Backend is built with Elysia & leveragi
 - [React Hook Form](https://react-hook-form.com/)
 - [Docker](https://www.docker.com/)
 
+_aka it doesn't get more type safe than this_
+
 ## Getting Started
 
 Clone the repo
